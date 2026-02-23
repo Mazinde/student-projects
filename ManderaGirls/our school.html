@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our School — Mandera Girls Secondary School</title>
+  <meta name="description" content="Learn about Mandera Girls Secondary School — our story, vision & mission, values, programs, facilities, and contact details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config for custom colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#eef6ff', 100: '#d9eaff', 200: '#b6d4ff', 300: '#8ebcff', 400: '#68a6ff', 500: '#438fff', 600: '#2674ea', 700: '#185cc1', 800: '#144a99', 900: '#113e7f'
+            },
+            accent: {
+              50: '#fff5f2', 100: '#ffe8e1', 200: '#ffd2c4', 300: '#ffb49b', 400: '#ff8f68', 500: '#ff6b36', 600: '#e55321', 700: '#bd421a', 800: '#983315', 900: '#7c2a12'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 0 8px rgb(67 143 255 / 0.08)'
+          },
+          keyframes: {
+            float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
+            fadeup: { '0%': { opacity: 0, transform: 'translateY(12px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            fadeup: 'fadeup .8s ease-out both'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Decorative background blobs */
+    .blob { filter: blur(40px); opacity: .35; }
+    .glass { backdrop-filter: saturate(180%) blur(10px); background: linear-gradient(to bottom right, rgb(255 255 255 / .7), rgb(255 255 255 / .55)); }
+    .dark .glass { background: linear-gradient(to bottom right, rgb(20 24 32 / .55), rgb(20 24 32 / .35)); }
+    .sticky-shadow { box-shadow: 0 6px 20px rgba(17, 24, 39, .08) }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+  <!-- Top decorative blobs -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-400 blob animate-float"></div>
+    <div class="absolute top-1/3 -right-24 w-96 h-96 rounded-full bg-accent-400 blob animate-float" style="animation-delay: -2s"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="top" class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/70 glass">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="#top" class="group inline-flex items-center gap-3" aria-label="Go to top">
+          <span class="grid place-items-center w-10 h-10 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 text-white font-bold shadow-glow">MG</span>
+          <div class="leading-tight">
+            <p class="font-extrabold tracking-tight text-lg">Mandera Girls</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Secondary School</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Primary Navigation">
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="index.html">Home</a>
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#vision">Vision & Mission</a>
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#values">Values</a>
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#programs">Programs</a>
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#facilities">Facilities</a>
+          <a class="px-4 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-md" aria-pressed="false" aria-label="Toggle dark mode">🌞</button>
+          <button id="openMenu" class="md:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2">
+        <nav class="grid gap-2" aria-label="Mobile Navigation">
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#about">About</a>
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#vision">Vision & Mission</a>
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#values">Values</a>
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#programs">Programs</a>
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#facilities">Facilities</a>
+          <a class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-200 px-3 py-1 text-xs font-semibold ring-1 ring-inset ring-brand-200/70 dark:ring-brand-800">Our School</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">A safe place to learn, grow, and shine.</h1>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Welcome to Mandera Girls Secondary School (Chalinze, Pwani). We are built on values, discipline, and creativity — preparing girls to become tomorrow's leaders.</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#about" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-gradient-to-r from-brand-600 to-accent-500 text-white font-semibold shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-brand-300">Learn More</a>
+            <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 font-semibold hover:shadow-md">Contact Us</a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="rounded-2xl p-4 glass text-center">
+              <p class="text-3xl font-extrabold">500+</p>
+              <p class="text-xs opacity-70">Students</p>
+            </div>
+            <div class="rounded-2xl p-4 glass text-center">
+              <p class="text-3xl font-extrabold">30+</p>
+              <p class="text-xs opacity-70">Teachers</p>
+            </div>
+            <div class="blockContents">
+
+            <div class="rounded-2xl p-4 glass text-center">
+              <p class="text-3xl font-extrabold">95%+</p>
+              <p class="text-xs opacity-70">Pass rate</p>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>   
+<section class="our school">
+  <div class="our school">
+    <div class="media-column">
+     <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="headmistress.jpg" alt="Empowerment" style="width: 90%" height="90vh">
+  </div>
+
+  <div class="slide fade">
+    <img src="Secondmaster.png" alt="Innovation" style="width: 90%" height="90vh">
+  </div>
+
+  <div class="slide fade">
+    <img src="Empowerment.jpg" alt="excellence" style="width:90%">
+  </div>
+
+  <div class="slide fade">
+    <img src="leadership.jpg" alt="leadership" style="width:100%">
+  </div>
+<div class="slide fade">
+    <img src="Graduaters.JPG" alt="excellence" style="width:90%">
+  </div>
+
+<!-- Dots for manual navigation -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<section class="about-section">
+  <style>
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+     margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+}
+
+.slide img {
+    height: 150vh;
+    width: 100%;
+    vertical-align:center;
+    display: flex;
+    border-radius: 50px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Dots/bullets */
+.dot-container {
+    text-align: center;
+    padding: 15px;
+    background: transparent;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #474545;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #7e22ce;
+}
+</style>
+</section>
+          
+
+  <!-- About -->
+  <section id="about" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6">
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">About Our School</h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Mandera Girls Secondary School is a government girls' school located in Chalinze, Pwani Region. We strive to nurture knowledge, skills, and character — with a focus on ICT, sciences, languages, and arts. Our environment encourages creativity, leadership, and community service.</p>
+          <ul class="grid gap-3">
+            <li class="flex items-start gap-3"><span class="text-xl">🎓</span><span>Experienced, professionally registered teachers.</span></li>
+            <li class="flex items-start gap-3"><span class="text-xl">🧪</span><span>Equipped Science Laboratory and ICT Room.</span></li>
+            <li class="flex items-start gap-3"><span class="text-xl">🏐</span><span>Sports facilities and vibrant clubs.</span></li>
+            <li class="flex items-start gap-3"><span class="text-xl">🛏️</span><span>Safe hostels with a supportive learning atmosphere.</span></li>
+          </ul>
+          <div class="flex gap-3 pt-2">
+            <a href="#programs" class="px-5 py-3 rounded-2xl bg-brand-600 text-white font-semibold hover:bg-brand-700">View Programs</a>
+            <a href="#contact" class="px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 font-semibold hover:shadow-md">Plan a Visit</a>
+          </div>
+        </div>
+        <div class="grid gap-6">
+          <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+            <h3 class="font-bold text-lg mb-2">Results & Awards</h3>
+            <p class="text-sm opacity-80">Consistent NECTA performance, regional school sports wins, and ICT innovation awards.</p>
+          </div>
+          <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+            <h3 class="font-bold text-lg mb-2">Partnerships</h3>
+            <p class="text-sm opacity-80">We collaborate with parents, local government, and partners to raise education quality.</p>
+          </div>
+          <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+            <h3 class="font-bold text-lg mb-2">Safety & Wellbeing</h3>
+            <p class="text-sm opacity-80">Safe environment, counselling services, and mental health programs for students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section id="vision" class="py-16 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-3xl p-8 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-950/40">
+          <h3 class="text-xl font-extrabold mb-3">Vision</h3>
+          <p class="text-slate-600 dark:text-slate-300">To be a leading centre for girls' education in Tanzania, producing principled, knowledgeable, and creative leaders for the modern world.</p>
+        </div>
+        <div class="rounded-3xl p-8 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-950/40">
+          <h3 class="text-xl font-extrabold mb-3">Mission</h3>
+          <p class="text-slate-600 dark:text-slate-300">To provide inclusive, results-oriented education by developing skills, character, and leadership through excellent teaching and caring mentorship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-8">Our Core Values</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-3xl">✨</p>
+          <h4 class="font-bold mt-2">Integrity</h4>
+          <p class="text-sm opacity-80">Honesty, accountability, and respect for others.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-3xl">📚</p>
+          <h4 class="font-bold mt-2">Academic Excellence</h4>
+          <p class="text-sm opacity-80">Rigorous learning and sustained achievement.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-3xl">🤝</p>
+          <h4 class="font-bold mt-2">Collaboration</h4>
+          <p class="text-sm opacity-80">Teamwork between school and home.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <p class="text-3xl">🌱</p>
+          <h4 class="font-bold mt-2">Discipline & Wellbeing</h4>
+          <p class="text-sm opacity-80">Good conduct and nurturing care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-16 bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Programs & Activities</h2>
+        <a href="#contact" class="hidden sm:inline-flex px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800">Enroll</a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">O-Level</h4>
+          <p class="text-sm opacity-80">Science, business, and arts subjects for a strong academic foundation.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">Students health</h4>
+          <p class="text-sm opacity-80">Presence of matrons and nearby dispensary, ensures good health.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">ICT & Robotics</h4>
+          <p class="text-sm opacity-80">ICT clubs, programming basics, and innovation competitions.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">Sports & Arts</h4>
+          <p class="text-sm opacity-80">Netball, athletics, choir, arts, and student leadership.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">Community Service</h4>
+          <p class="text-sm opacity-80">Environmental projects, hygiene campaigns, and health awareness.</p>
+        </div>
+        <div class="rounded-3xl p-6 bg-white dark:bg-slate-950 ring-1 ring-slate-200 dark:ring-slate-800">
+          <h4 class="font-bold mb-1">Girls' Leadership</h4>
+          <p class="text-sm opacity-80">Confidence building, self-awareness, and 21st‑century skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities (gallery-style cards) -->
+  <section id="facilities" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-8">Our Facilities</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card template -->
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-brand-400 to-accent-400 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">A Laboratory</h4>
+              <p class="text-sm opacity-80">Equipped for hands-on experiments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-brand-300 to-brand-600 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">Library & ICT</h4>
+              <p class="text-sm opacity-80">Reading resources and ICT equipment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-accent-300 to-accent-600 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">Hostels & Kitchen</h4>
+              <p class="text-sm opacity-80">Security, cleanliness, and good nutrition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-slate-300 to-slate-600 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">Sports Grounds</h4>
+              <p class="text-sm opacity-80">Netball, soccer, and athletics.</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-emerald-300 to-emerald-600 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">Events Hall</h4>
+              <p class="text-sm opacity-80">Meetings, choir, and stage performances.</p>
+            </div>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-3xl ring-1 ring-slate-200 dark:ring-slate-800">
+          <div class="h-48 bg-gradient-to-br from-fuchsia-300 to-fuchsia-600 opacity-90"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="glass rounded-2xl p-4">
+              <h4 class="font-bold">Offices & Administration</h4>
+              <p class="text-sm opacity-80">Supportive services for parents and students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Timeline -->
+  <section class="py-16 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-10">Our Journey at a Glance</h2>
+      <ol class="relative border-s-l border-slate-200 dark:border-slate-800 ps-6 space-y-8">
+        <li>
+          <div class="absolute -start-2.5 mt-1.5 h-4 w-4 rounded-full bg-brand-500"></div>
+          <div class="rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-950/40">
+            <p class="text-sm opacity-70">2015</p>
+            <p class="font-semibold">School founded</p>
+            <p class="text-sm opacity-80">Mandera Girls was officially launched to elevate girls' education.</p>
+          </div>
+        </li>
+        <li>
+          <div class="absolute -start-2.5 mt-1.5 h-4 w-4 rounded-full bg-accent-500"></div>
+          <div class="rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-950/40">
+            <p class="text-sm opacity-70">2019</p>
+            <p class="font-semibold">New labs & library</p>
+            <p class="text-sm opacity-80">Major investments in ICT and Science.</p>
+          </div>
+        </li>
+        <li>
+          <div class="absolute -start-2.5 mt-1.5 h-4 w-4 rounded-full bg-brand-700"></div>
+          <div class="rounded-2xl p-4 ring-1 ring-slate-200 dark:ring-slate-800 bg-white/70 dark:bg-slate-950/40">
+            <p class="text-sm opacity-70">2023</p>
+            <p class="font-semibold">Top NECTA performance</p>
+            <p class="text-sm opacity-80">Over 95% pass rate for Form Four students.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Testimonials (simple carousel) -->
+  <section class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">What People Say</h2>
+        <div class="hidden sm:flex gap-2">
+          <button id="prev" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800">←</button>
+          <button id="next" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800">→</button>
+        </div>
+      </div>
+      <div id="carousel" class="relative overflow-hidden">
+        <div id="track" class="flex transition-transform duration-500 will-change-transform">
+          <!-- Slide 1 -->
+          <div class="min-w-full px-2">
+            <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+              <p class="text-lg font-semibold mb-2">Parent</p>
+              <p class="opacity-80">“My daughter has grown academically and morally — the teachers really care.”</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="min-w-full px-2">
+            <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+              <p class="text-lg font-semibold mb-2">Student</p>
+              <p class="opacity-80">“I gained confidence to lead a club and join national competitions.”</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="min-w-full px-2">
+            <div class="rounded-3xl p-6 glass ring-1 ring-slate-200/60 dark:ring-slate-800/60">
+              <p class="text-lg font-semibold mb-2">Alumni</p>
+              <p class="opacity-80">“The foundation here helped me join university well-prepared.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex sm:hidden justify-center gap-2 mt-4">
+        <button id="prevSm" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800">←</button>
+        <button id="nextSm" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-800">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-brand-600 to-accent-500 text-white">
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Ready to visit or enroll?</h3>
+            <p class="mt-2 opacity-90">We’d love to welcome you — get admission details or schedule a tour.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="Contacts.html" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-white/10 ring-1 ring-inset ring-white/30 font-semibold hover:bg-white/15">Contact Details</a>
+            <a href="#top" class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-white text-brand-700 font-semibold">Back to Top</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="pt-16 pb-10 bg-slate-950 text-slate-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <p class="text-lg font-extrabold">Mandera Girls Secondary School</p>
+          <p class="text-sm opacity-80 mt-1">Chalinze, Pwani Region, Tanzania</p>
+          <p class="text-sm opacity-80">P.O. Box 85 — Chalinze</p>
+        </div>
+        <div>
+          <p class="font-bold mb-2">Contacts</p>
+          <ul class="space-y-1 text-sm opacity-90">
+            <li>Phone: +255 655 760 446</li>
+            <li>Email: mandera1girls@gmail.com</li>
+            <li>Office Hours: Mon–Fri 8:00–16:00</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-bold mb-2">Quick Links</p>
+          <ul class="space-y-1 text-sm opacity-90">
+            <li><a class="hover:underline" href="#about">About</a></li>
+            <li><a class="hover:underline" href="#programs">Programs</a></li>
+            <li><a class="hover:underline" href="#facilities">Facilities</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 flex items-center justify-between text-xs opacity-70">
+        <p>© <span id="year"></span> Mandera Girls Secondary School. All rights reserved.</p>
+        <a href="#top" class="underline">Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="fixed bottom-4 right-4 hidden px-3 py-2 rounded-full bg-brand-600 text-white shadow-lg hover:bg-brand-700" aria-label="Back to top">↑</button>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const openMenu = document.getElementById('openMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    openMenu.addEventListener('click', () => {
+      const expanded = openMenu.getAttribute('aria-expanded') === 'true';
+      openMenu.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Dark mode toggle with localStorage
+    const themeToggle = document.getElementById('themeToggle');
+    const setTheme = (dark) => {
+      document.documentElement.classList.toggle('dark', dark);
+      themeToggle.textContent = dark ? '🌙' : '🌞';
+      themeToggle.setAttribute('aria-pressed', String(dark));
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    };
+    const initDark = () => {
+      const saved = localStorage.getItem('theme');
+      const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(saved ? saved === 'dark' : prefers);
+    };
+    themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+    initDark();
+
+    // Back to top visibility
+    const backToTop = document.getElementById('backToTop');
+    const header = document.querySelector('header');
+    const onScroll = () => {
+      backToTop.classList.toggle('hidden', window.scrollY < 400);
+      header.classList.toggle('sticky-shadow', window.scrollY > 6);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Testimonials carousel
+    const track = document.getElementById('track');
+    const slides = Array.from(track.children);
+    let idx = 0;
+    const go = (n) => {
+      idx = (n + slides.length) % slides.length;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+    };
+    document.getElementById('prev').addEventListener('click', () => go(idx - 1));
+    document.getElementById('next').addEventListener('click', () => go(idx + 1));
+    document.getElementById('prevSm').addEventListener('click', () => go(idx - 1));
+    document.getElementById('nextSm').addEventListener('click', () => go(idx + 1));
+    setInterval(() => go(idx + 1), 6000);
+
+    // Smooth scroll offset for sticky header
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href');
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        const y = el.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        if (!link.closest('nav')) return;
+        mobileMenu.classList.add('hidden');
+        openMenu.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+  <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+
+    for (i =0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].classList.add("active");
+    setTimeout(showSlides, 5000); // Change image every 20 seconds
+}
+
+function plusSlides(n) {
+    slideIndex += n - 1;
+    showSlides();
+}
+
+function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides();
+}
+</script>
+</body>
+</html>

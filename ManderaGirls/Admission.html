@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Mandera Girls Secondary School</title>
+</head>
+<body>
+
+<!-- ✅ NEW HEADER SECTION WITH NAVIGATION -->
+<header class="main-header">
+  <div class="head_one">
+    <div class="logo">
+      <img src="bibi na bwana.png" alt="National Logo" />
+    </div>
+    <div class="school-name"><h1>Mandera Girls Secondary School</h1></div>
+    <div class="logo">
+     <img src="School_Logo.png" alt="School Logo" />
+     </div>
+  </div>
+</header>
+  <nav bgcolor="violet">
+    <ul id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Our history.html">AboutUs</a></li>
+      <li><a href="Admission.html">Admission</a></li>
+      <li><a href="Academics.html">Academics</a></li>
+      <li><a href="Our school.html">Our School</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Students.html">Students</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+      <li><a href="Events.html">Events</a></li>
+    </ul>
+  </nav>
+
+<!-- Hero Section with Overlay -->
+<header class="admission-hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1>Admissions</h1>
+    <p>Your journey to excellence starts here</p>
+  </div>
+</header>
+<style>
+/* ========== Header Styles ========== */
+.hero-section {
+  background: linear-gradient(to right, #004080, #9c27e5, #e9bee6);
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+/* Logo and School Name */
+.head_one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.school-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color:black;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background:blueviolet;
+    transform: scale(1.05);
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #a62bc7;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+<section class="admission-info">
+    <h2>Admission Requirements</h2>
+    <p>We welcome all eligible girls who are passionate about learning and growth. Below are the general requirements for joining Mandera Girls Secondary School:</p>
+   
+    <ul class="requirements">
+   
+        <li> A copy of Birth Certificate</li>
+        <li> Recent passport-size photographs (3 pieces)</li>
+        <li> Transfer letter (for transfered students)</li>
+        <li> Medical checkup Report</li>
+
+    </ul>
+</section>
+
+<section class="joining-instructions">
+    <h2>Joining Instructions</h2>
+    <p>Please read the instructions below carefully before reporting:</p>
+    <ol class="instructions">
+        <li>Report to school on the official reporting date indicated in the admission letter.</li>
+        <li>Come with all required documents and personal items as listed in the admission package.</li>
+        <li>Students are expected to be in full school uniform on the reporting day.</li>
+        <li>Parents/Guardians must accompany the student for orientation.</li>
+        <li>Medical examination form must be duly filled by a certified doctor.</li>
+    </ol>
+
+    <a href="JOINING  INSTRUCTION  2025.pdf" class="View" download>📥 View Full Joining Instructions (PDF)</a>
+</section>
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fefeff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.admission-hero {
+    background: url('Excellence.jpg') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      color: #ffffff;
+}
+
+.admission-hero .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #73ffb4;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #84ccef;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.requirements, .instructions {
+    list-style: none;
+    padding-left: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.requirements li::before,
+.instructions li::before {
+    content: "➤";
+    margin-right: 10px;
+    color: #05ff61;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    background-color: #b6b7b8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ababab;
+}
+
+  /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+     footer {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      height: 28px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+       } 
+</style>
+<footer>
+  <div class="contact-info">
+    <font size="6">Email: mandera1girls@gmail.com | Phone: +255 655 760 446</font>
+  </div>
+  <div class="social-icons">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Mandera girls secondary school</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Mandera_girls secondary school</a>
+  </div><br>
+<font face="monotype corsiva">To educate a girl,is to educate the society</font>
+</font>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById('navList').classList.toggle('show');
+  }
+</script>
+</body>
+</html>
+

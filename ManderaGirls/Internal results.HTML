@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Result</title>
+  <style>
+    :root{
+      --glass: rgba(255,255,255,0.85);
+      --accent1: #0b74ff; /* blue */
+      --accent2: #ff6b6b; /* coral */
+      --accent3: #6bffb3; /* mint */
+      --accent4: #ffb86b; /* warm */
+      --card-bg: rgba(255,255,255,0.9);
+    }
+
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial}
+    body{
+      background-image: url('exam-room.jpg'); /* replace with your photo file */
+      background-size: cover;
+      background-position: center;
+      display:flex;align-items:center;justify-content:center;padding:32px;
+    }
+
+    /* dark overlay so text is readable */
+    .overlay{
+      position:fixed;inset:0;background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35));pointer-events:none;z-index:0;
+    }
+
+    .container{
+      width:100%;max-width:980px;z-index:1;position:relative;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.25);padding:28px;
+    }
+
+    header h1{margin:0;font-size:2.1rem;color:#111;font-weight:700}
+    .meta{margin-top:8px}
+
+    .year-link{
+      display:inline-block;padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,var(--accent1),#3ea0ff);color:white;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(11,116,255,0.22);border:0;cursor:pointer;margin-top:12px;
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:22px}
+
+    .card{
+      background:var(--card-bg);padding:18px;border-radius:12px;min-height:140px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;justify-content:center;border:1px solid rgba(0,0,0,0.04)
+    }
+
+    .card h3{margin:0;font-size:1.05rem}
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+
+    .btn{
+      appearance:none;border:0;padding:10px 14px;border-radius:8px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 14px rgba(16,24,40,0.08);transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:focus{outline:3px solid rgba(0,0,0,0.08);outline-offset:2px}
+    .btn:hover{transform:translateY(-3px)}
+
+    /* different button styles */
+    .btn-blue{background:linear-gradient(180deg,var(--accent1),#1976ff);color:white}
+    .btn-coral{background:linear-gradient(180deg,var(--accent2),#ff5252);color:white}
+    .btn-mint{background:linear-gradient(180deg,var(--accent3),#3deaa5);color:#033a2b}
+    .btn-warm{background:linear-gradient(180deg,var(--accent4),#ff9f4d);color:#3a1f00}
+
+    /* small helper */
+    .note{font-size:0.9rem;color:#333}
+
+    @media (max-width:560px){
+      header h1{font-size:1.6rem}
+      .container{padding:18px}
+      .card{min-height:120px}
+    }
+     /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+     footer {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      height: 28px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .text-slideshow {
+        font-size: 1.8em;
+        padding: 0 10px;
+      }
+
+     
+
+      .bar {
+        align-self: center !important;
+      }
+
+      .quick-links {
+        flex-direction: column;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+  <div class="overlay" aria-hidden="true"></div>
+  <main class="container" role="main">
+    <header>
+      <h1 id="page-title">Internal Exam Results</h1>
+      <p class="meta">Choose the year of results or find the class here down.</p>
+      <a class="year-link" href="#year2025">2025</a>
+    </header>
+
+    <section id="year2025" aria-labelledby="page-title">
+      <div class="grid">
+        <article class="card" aria-labelledby="midterm-title">
+          <h3 id="midterm-title">MID TERM</h3>
+          <p class="note">Choose class (mid-term).</p>
+          <div class="btn-row">
+            <a class="btn btn-blue" href="MANDERA GIRLS F.I RESULTS (1).pdf" role="button">Form One</a>
+            <a class="btn btn-coral" href="MANDERA GIRLS F.I RESULTS.pdf" role="button">Form Two</a>
+            <a class="btn btn-mint" href="MANDERA GIRLS F.II RESULTS.pdf" role="button">Form Three</a>
+            <a class="btn btn-warm" href="MANDERA GIRLS F.III RESULTS.pdf" role="button">Form Four</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="terminal-title">
+          <h3 id="terminal-title">TERMINAL</h3>
+          <p class="note">choose class (terminal).</p>
+          <div class="btn-row">
+            <a class="btn btn-mint" href="MANDERA GIRLS F.I RESULTS (1).pdf" role="button">Form One</a>
+            <a class="btn btn-warm" href="MANDERA GIRLS F.I RESULTS (1).pdf" role="button">Form Two</a>
+            <a class="btn btn-blue" href="MANDERA GIRLS F.I RESULTS (1).pdf" role="button">Form Three</a>
+            <a class="btn btn-coral" href="MANDERA GIRLS F.IV RESULTS.pdf" role="button">Form Four</a>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="annual-title">
+          <h3 id="annual-title">ANNUAL</h3>
+          <p class="note">Choose class (annual).</p>
+          <div class="btn-row">
+            <a class="btn btn-coral" href="Internal results.HTML" role="button">Form One</a>
+            <a class="btn btn-blue" href="Internal results.HTML" role="button">Form Three</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  <section>
+  <footer>
+  <div class="contact-info">
+    <font size="6">Email: mandera1girls@gmail.com | Phone: +255 655 760 446</font>
+  </div>
+  <div class="social-icons">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Mandera girls secondary school</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Mandera_girls secondary school</a>
+  </div><br>
+<font face="monotype corsiva">To educate a girl,is to educate the society</font>
+</font>
+</footer>
+</section>
+</main>
+</body>
+</html>

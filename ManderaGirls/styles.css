@@ -1,0 +1,105 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #3a7ca5;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.countdown-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #eaf4fc;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #003f5c;
+}
+
+.filters {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#searchBar {
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.category-buttons button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #3a7ca5;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.category-buttons button:hover {
+  background-color: #265d7d;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+.event-card h3 {
+  color: #3a7ca5;
+}
+
+.event-card .date {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  background: #3a7ca5;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}

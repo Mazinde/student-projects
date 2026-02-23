@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academics | Mandera Girls Secondary School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9fb;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #7e22ce, #ec4899);
+      color: violet;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 90px;
+    }
+
+    .logo img {
+      height: 90px;
+      border-radius: 8px;
+    }
+
+    .school-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: rgb(7, 8, 8);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background:rebeccapurple;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #7e22ce;
+        display: none;
+        padding: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    .hero {
+      background: url('leadership.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 1;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #6b21a8;
+      margin-bottom: 20px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .result-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .result-card i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #9333ea;
+    }
+
+    .result-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .result-card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #9333ea;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .result-card a:hover {
+      background: #7e22ce;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+     footer {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      height: 28px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .text-slideshow {
+        font-size: 1.8em;
+        padding: 0 10px;
+      }
+
+     
+
+      .bar {
+        align-self: center !important;
+      }
+
+      .quick-links {
+        flex-direction: column;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+
+<!-- ✅ NEW HEADER SECTION WITH NAVIGATION -->
+<header class="main-header">
+  <div class="logo">
+    <img src="bibi na bwana.png" alt="National Logo">
+    <span class="school-name"><font size="9">Mandera Girls Secondary School</font></span>
+    <img src="school_logo.png" alt="Mandera Girls Logo">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+  <nav bgcolor="violet">
+    <ul id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Our history.html">AboutUs</a></li>
+      <li><a href="Admission.html">Admission</a></li>
+      <li><a href="Academics.html">Academics</a></li>
+      <li><a href="Our school.html">Our School</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Students.html">Students</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+      <li><a href="Events.html">Events</a></li>
+    </ul>
+  </nav>
+
+<!-- ✅ Hero Section -->
+<section class="hero">
+  <h1>Academic Excellence & Results</h1>
+</section>
+
+<!-- ✅ Results Section -->
+<section class="section">
+  <h2>National Examination Results</h2>
+
+  <div class="results-grid">
+    <!-- Form 2 - 2023 -->
+    <div class="result-card">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Form 2 National Results 2023</h3>
+      <a href="FTNA 2023-MANDERA GIRLS SS.pdf" download>📥 View</a>
+    </div>
+
+    <!-- Form 2 - 2024 -->
+    <div class="result-card">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Form 2 National Results 2024</h3>
+      <a href="FTNA 2024.pdf" download>📥 View</a>
+    </div>
+
+    <!-- Form 4 - 2023 -->
+    <div class="result-card">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Form 4 CSEE Results 2023</h3>
+      <a href="CSEE 2023 - MANDERA GIRLS.pdf" download>📥 View</a>
+    </div>
+
+    <!-- Form 4 - 2024 -->
+    <div class="result-card">
+      <i class="fas fa-file-pdf"></i>
+      <h3>Form 4 CSEE Results 2024</h3>
+      <a href="CSEE 2024 - MANDERA GIRLS.pdf" download>📥 View</a>
+    </div>
+<!-- INTERNAL RESULTS -->
+    <div class="result-card">
+      <i class="fas fa-file-pdf"></i>
+      <h3>INTERNAL RESULTS-2025</h3>
+      <a href="Internal results.HTML" download>📥 View</a>
+    </div>
+</section>
+<footer>
+  <div class="contact-info">
+    <font size="6">Email: mandera1girls@gmail.com | Phone: +255 655 760 446</font>
+  </div>
+  <div class="social-icons">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Mandera girls secondary school</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Mandera_girls secondary school</a>
+  </div><br>
+<font face="monotype corsiva">To educate a girl,is to educate the society</font>
+</font>
+</footer>
+<!-- ✅ Script for responsive menu -->
+<script>
+  function toggleMenu() {
+    document.getElementById('navList').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

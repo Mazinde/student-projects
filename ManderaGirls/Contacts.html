@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD section (meta, title, styles) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Mandera Girls Secondary</title>
+
+  <!-- External Styles & Fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  /* ========== Global Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* ========== Header Styles ========== */
+.hero-section {
+  background: linear-gradient(to right, #004080, #9c27e5, #e9bee6);
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+/* Logo and School Name */
+.head_one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.school-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ========== Navigation Bar ========== */
+.navbar {
+  background-color: #003366;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #0059b3;
+}
+
+/* ========== Hero Text ========== */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #dbe9ff;
+}
+
+/* ========== Responsive Menu ========== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* On smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #8d5ea2;
+    padding: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+
+  .head_one {
+    position: relative;
+  }
+}
+</style>
+<head-one><div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+</head-one>
+</head>
+
+<!-- HEADER section (navigation, logo, hero) -->
+<header class="hero-section">
+
+  <!-- Logo and School Name -->
+  <div class="head_one">
+    <div class="logo">
+      <img src="bibi na bwana.png" alt="National Logo" />
+    </div>
+    <div class="school-name"><h1>Mandera Girls Secondary School</h1></div>
+    <div class="logo">
+     <img src="School_Logo.png" alt="School Logo" />
+     </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Our history.html">About Us</a></li>
+      <li><a href="Admission.html">Admission</a></li>
+      <li><a href="Academics.html">Academics</a></li>
+      <li><a href="Our school.html">Our School</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Students.html">Students</a></li>
+      <li><a href="Contacts.html" class="active">Contacts</a></li>
+      <li><a href="event.html">Events</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero-title">Welcome to Mandera Girls Secondary School</h1>
+    <p class="hero-subtitle"><h1>To educate a girl is to educate a society</h1></p>
+  </section>
+
+</header>
+
+  <style>
+    /* You may move this into your external CSS file */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f2f4f8;
+      color: #333;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-header h1 {
+      font-size: 2.5rem;
+      color: #004080;
+    }
+
+    .contact-header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .contact-details {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    .contact-details h2 {
+      color: #8d5a9e;
+      margin-bottom: 10px;
+    }
+
+    .contact-details ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .contact-details li i {
+      color: #620080;
+      margin-right: 10px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 450px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-details {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-container">
+    <div class="contact-header">
+      <h1>📍 Contact Us</h1>
+      <p><h3>We're here to assist you — Reach out or visit us today!</h3></p>
+    </div>
+
+    <div class="contact-details">
+      <h2>Mandera Girls Secondary School</h2>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Chalinze, Mkoa wa Pwani, Tanzania</li>
+        <li><i class="fas fa-phone-alt"></i> +255 655 760 446</li>
+        <li><i class="fas fa-envelope"></i> mandera1girls@gmail.com</li>
+      </ul>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Mandera+Girls+Secondary+School,+Chalinze,+Pwani,+Tanzania&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+<footer>
+  <div class="contact-info">
+    <font size="6">Email: mandera1girls@gmail.com | Phone: +255 655 760 446</font>
+  </div>
+  <div class="social-icons">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Mandera girls secondary school</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Mandera_girls secondary school</a>
+  </div><br>
+<font face="monotype corsiva">To educate a girl,is to educate the society</font>
+</font>
+</footer>
+<style>
+   /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+     footer {
+      background-color: #002244;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      height: 28px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .text-slideshow {
+        font-size: 1.8em;
+        padding: 0 10px;
+      }
+
+     
+
+      .bar {
+        align-self: center !important;
+      }
+
+      .quick-links {
+        flex-direction: column;
+        align-items: center;
+      }
+</style>
+</body>
+</html>

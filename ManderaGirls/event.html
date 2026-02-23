@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mandera Girls Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(74, 155, 196, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(80, 93, 155, 0.4);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+   
+    /* Footer */
+    footer {
+      background-color: teal;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+     footer {
+      background-color: teal;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .social-icons img {
+      height: 28px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .text-slideshow {
+        font-size: 1.8em;
+        padding: 0 10px;
+      }
+
+     
+
+      .bar {
+        align-self: center !important;
+      }
+
+      .quick-links {
+        flex-direction: column;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+
+  <header>
+   <div class="head_one">
+    <div class="logo">
+      <img src="bibi na bwana.png" alt="National Logo" />
+    </div>
+    <div class="school-name"><h1>Mandera Girls Secondary School</h1></div>
+    <div class="logo">
+     <img src="School_Logo.png" alt="School Logo" />
+     </div>
+  </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav>
+      <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+                    <li><a href="Our history.html">AboutUs</a></li>
+                    <li><a href="Admission.html">Admission</a></li>
+                    <li><a href="Academics.html">Academics</a></li>
+                    <li><a href="Our school.html">Our School</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Students.html">Students</a></li>
+                    <li><a href="Contacts.html">Contacts</a></li>
+                    <li><a href="event.html">Events</a></li>
+      </ul>
+    </nav>
+  </div>
+    <p class="subtitle">Official Events Page for Students & Parents</p>
+  </header>
+  <section class="filters">
+    <input type="text" id="searchBar" placeholder="Search events...">
+    <div class="category-buttons">
+      <button onclick="filterEvents('all')">All</button>
+      <button onclick="filterEvents('academic')">Academic</button>
+      <button onclick="filterEvents('sports')">Sports</button>
+      <button onclick="filterEvents('clubs')">Clubs</button>
+      <button onclick="filterEvents('graduation')">Graduation</button>
+    </div>
+  </section>
+
+  <section class="events" id="eventsContainer">
+    <!-- Event cards will be injected here -->
+  </section>
+<section class="gallery-section">
+    <div class="gallery-grid">
+           <!-- Gallery Item -->
+      <div class="gallery-item">
+        <img src="eatv.png" alt="Eatv Namthamini Event">
+        <div class="caption">Maintainance of girls comfortability health</div>
+      </div>
+        <!-- Gallery Item -->
+        <div class="gallery-item">
+        <img src="awards.jpg" alt="awards">
+        <div class="caption">We appreciate our students hard working</div>
+      </div>
+        <!-- Gallery Item -->
+      <div class="gallery-item">
+        <img src="GRADUATION.jpg" alt="School Graduation">
+        <div class="caption">Graduation</div>
+      </div>
+        <!-- Gallery Item -->
+      <div class="gallery-item">
+        <img src="club.jpeg" alt="Cooking club">
+        <div class="caption">Learning for the good taste</div>
+      </div>
+
+    </div>
+  </section>
+  <style>
+  /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ========== Header Styles ========== */
+.hero-section {
+  background: linear-gradient(to right, #004080, #9c27e5, #e9bee6);
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+/* Logo and School Name */
+.head_one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.school-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Menu */
+nav {
+  width: 100%;
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #0066cc;
+}
+
+/* Menu Toggle (hamburger icon) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Header Intro Text */
+.header-intro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header-intro p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+</style>
+<menu-toggle>
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+  }
+</script>
+</menu-toggle>
+  
+   <footer>
+  <div class="contact-info">
+    <font size="6">Email: mandera1girls@gmail.com | Phone: +255 655 760 446</font>
+  </div>
+  <div class="social-icons">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Mandera girls secondary school</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Mandera_girls secondary school</a>
+  </div><br>
+<font face="monotype corsiva">To educate a girl,is to educate the society</font>
+</font>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
